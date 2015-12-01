@@ -8,19 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate{
 
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipSlider: UISlider!
+    @IBOutlet weak var tipPer: UILabel!
+    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     
     @IBAction func sliderMoved(sender: AnyObject) {
-        print(tipSlider.value)
+        //print(tipSlider.value)
+        table.reloadData()
     }
     
+    @available(iOS 2.0, *)
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return 4
+    }
+    
+    @available(iOS 2.0, *)
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        var billAmt = Double(billField.text!._bridgeToObjectiveC().doubleValue)
+
+        let tipNum = Double(Int(tipSlider.value * 120))
+        let tipValue = (tipNum/100.00) * billAmt
+        var rowNum = Double(indexPath.row)+1
+        cell.textLabel?.text = String(format: "$%.2f", (tipValue + billAmt)/rowNum)
+        tipPer.text = "\((tipNum)) \(tipValue) \(billAmt)"
+        
+        totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
+        tipLabel.text = String(format: "$%.2f", (tipValue))
+        
+        return cell
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +75,8 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        table.reloadData()
     }
 
     @IBAction func onTap(sender: AnyObject) {
