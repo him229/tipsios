@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     
-    @IBAction func slidermove(sender: AnyObject) {
-        print()
+    @IBAction func sliderMoved(sender: AnyObject) {
+        print(tipSlider.value)
     }
     
     
