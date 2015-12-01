@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func slidermove(sender: AnyObject) {
-        print(slidermove(<#T##sender: AnyObject##AnyObject#>))
+        print()
     }
     
     
