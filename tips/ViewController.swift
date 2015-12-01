@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         var rowNum = Double(indexPath.row)+1
         cell.textLabel?.text = String(format: "$%.2f", (tipValue + billAmt)/rowNum)
         tipPer.text = "\((tipNum)) \(tipValue) \(billAmt)"
-        
+    
         totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
         tipLabel.text = String(format: "$%.2f", (tipValue))
         
@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
