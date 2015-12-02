@@ -72,6 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         var total = tip + billAmount
         
         tipLabel.text = "$\(tip)"
+        
         totalLabel.text = "$\(total)"
         
         tipLabel.text = String(format: "$%.2f", tip)
