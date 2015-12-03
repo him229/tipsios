@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    var pointerValue = 0.00
     
     @IBAction func sliderMoved(sender: AnyObject) {
         //print(tipSlider.value)
@@ -84,8 +85,8 @@ class ViewController: UIViewController, UITableViewDelegate{
         
         if(tipSlider.value != tipPercentageFloat){tipControl.selectedSegmentIndex = -1}
         
-        var billAmountStr = billField.text!
-        var billAmount = billAmountStr._bridgeToObjectiveC().doubleValue
+//        var billAmountStr = billField.text!
+//        var billAmount = billAmountStr._bridgeToObjectiveC().doubleValue
 //        var tip = tipPercentage * billAmount
 //        var total = tip + billAmount
 //        
