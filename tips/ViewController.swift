@@ -22,6 +22,16 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBAction func sliderMoved(sender: AnyObject) {
         //print(tipSlider.value)
         table.reloadData()
+        
+        var tipPercentages = ["0.15","0.2","0.25"]
+        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        
+        let numberFormatter = NSNumberFormatter()
+        let number = numberFormatter.numberFromString(tipPercentage)
+        let tipPercentageFloat = number!.floatValue
+        
+        if(tipSlider.value != tipPercentageFloat){tipControl.selectedSegmentIndex = -1}
+
     }
     
     @available(iOS 2.0, *)
@@ -71,6 +81,8 @@ class ViewController: UIViewController, UITableViewDelegate{
         let tipPercentageFloat = number!.floatValue
         
         tipSlider.value = tipPercentageFloat
+        
+        if(tipSlider.value != tipPercentageFloat){tipControl.selectedSegmentIndex = -1}
         
         var billAmountStr = billField.text!
         var billAmount = billAmountStr._bridgeToObjectiveC().doubleValue
