@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         var billAmt = Double(billField.text!._bridgeToObjectiveC().doubleValue)
 
-        let tipNum = Double(Int(tipSlider.value * 120))
+        let tipNum = Double(Int(tipSlider.value * 100))
         let tipValue = (tipNum/100.00) * billAmt
         var rowNum = Double(indexPath.row)+1
         cell.textLabel?.text = String(format: "$%.2f", (tipValue + billAmt)/rowNum)
@@ -63,20 +63,26 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        var tipPercentages = [0.15,0.2,0.25]
+        var tipPercentages = ["0.15","0.2","0.25"]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        
+        let numberFormatter = NSNumberFormatter()
+        let number = numberFormatter.numberFromString(tipPercentage)
+        let tipPercentageFloat = number!.floatValue
+        
+        tipSlider.value = tipPercentageFloat
         
         var billAmountStr = billField.text!
         var billAmount = billAmountStr._bridgeToObjectiveC().doubleValue
-        var tip = tipPercentage * billAmount
-        var total = tip + billAmount
-        
-        tipLabel.text = "$\(tip)"
-        
-        totalLabel.text = "$\(total)"
-        
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+//        var tip = tipPercentage * billAmount
+//        var total = tip + billAmount
+//        
+//        tipLabel.text = "$\(tip)"
+//        
+//        totalLabel.text = "$\(total)"
+//        
+//        tipLabel.text = String(format: "$%.2f", tip)
+//        totalLabel.text = String(format: "$%.2f", total)
         
         table.reloadData()
     }

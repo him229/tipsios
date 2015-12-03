@@ -69,7 +69,7 @@
                                     <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jL3-Os-eXa"/>
                                 </connections>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.059999999999999998" minValue="0.0" maxValue="0.5" id="UyH-x4-nmU">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" id="UyH-x4-nmU">
                                 <rect key="frame" x="18" y="215" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
