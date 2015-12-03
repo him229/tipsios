@@ -24,8 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate{
         table.reloadData()
         
         var tipPercentages = ["0.15","0.2","0.25"]
-        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
+        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         let numberFormatter = NSNumberFormatter()
         let number = numberFormatter.numberFromString(tipPercentage)
         let tipPercentageFloat = number!.floatValue
