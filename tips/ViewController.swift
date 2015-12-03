@@ -24,14 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         //print(tipSlider.value)
         table.reloadData()
         
-        var tipPercentages = ["0.15","0.2","0.25"]
-        
-        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        let numberFormatter = NSNumberFormatter()
-        let number = numberFormatter.numberFromString(tipPercentage)
-        let tipPercentageFloat = number!.floatValue
-        
-        if(tipSlider.value != tipPercentageFloat){tipControl.selectedSegmentIndex = -1}
+        if(Double(tipSlider.value) != pointerValue){tipControl.selectedSegmentIndex = -1}
 
     }
     
@@ -76,6 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentages = ["0.15","0.2","0.25"]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        pointerValue = Double(tipPercentage)!
         
         let numberFormatter = NSNumberFormatter()
         let number = numberFormatter.numberFromString(tipPercentage)
