@@ -12,10 +12,67 @@
                     <view key="view" contentMode="scaleToFill" id="ei4-Hs-Svy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mV2-P9-epz">
+                                <rect key="frame" x="114" y="313" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Pay Now"/>
+                                <connections>
+                                    <action selector="donate:" destination="uNG-cB-rh9" eventType="touchUpInside" id="hwZ-PB-C3U"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="wyO-ZD-OUL">
+                                <rect key="frame" x="114" y="223" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Ji1-GS-MZa">
+                                <rect key="frame" x="114" y="185" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="sXy-fU-ss0">
+                                <rect key="frame" x="114" y="147" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="v8t-lg-mhe">
+                                <rect key="frame" x="114" y="109" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="zid-hP-NCm">
+                                <rect key="frame" x="114" y="261" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cOf-mk-Oo1"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="zid-hP-NCm" id="liM-vF-jJs"/>
+                        <outlet property="cardNumberTextField" destination="sXy-fU-ss0" id="CWf-Ec-0YW"/>
+                        <outlet property="cvcTextField" destination="wyO-ZD-OUL" id="brd-xj-JeA"/>
+                        <outlet property="emailTextField" destination="v8t-lg-mhe" id="k67-RZ-KoG"/>
+                        <outlet property="expireDateTextField" destination="Ji1-GS-MZa" id="lng-XM-E1S"/>
+                        <outlet property="payButto" destination="mV2-P9-epz" id="pBQ-lv-wv0"/>
+                        <outlet property="payButton" destination="mV2-P9-epz" id="ZGl-fk-xCQ"/>
+                        <outlet property="paymentTextFiel" destination="zid-hP-NCm" id="ixb-LL-Dwv"/>
+                        <outlet property="paymentTextField" destination="zid-hP-NCm" id="RH9-zV-U6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-d4-oLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
