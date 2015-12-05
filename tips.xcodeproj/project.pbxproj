@@ -20,6 +20,8 @@
 		5E91D8700266015ACF613D90 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6656DF35A63AB25000E2951B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		713ED59458EAB6D2F3BF3124 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A374A6541C12AD9D001778ED /* tips-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tips-Bridging-Header.h"; sourceTree = "<group>"; };
+		A374A6551C12B397001778ED /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A3C567671C0D189A00FB862B /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5676A1C0D189A00FB862B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		A3C5675E1C0D189A00FB862B = {
 			isa = PBXGroup;
 			children = (
+				A374A6551C12B397001778ED /* bridge.h */,
+				A374A6541C12AD9D001778ED /* tips-Bridging-Header.h */,
 				A3C567691C0D189A00FB862B /* tips */,
 				A3C567681C0D189A00FB862B /* Products */,
 				D35D9C816144D146E870D140 /* Pods */,
@@ -333,6 +337,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.himankyadav.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/himankyadav/Documents/iOS Xcode/tips/bridge.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
 			name = Debug;
 		};
@@ -345,6 +352,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.himankyadav.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/himankyadav/Documents/iOS Xcode/tips/bridge.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 			};
 			name = Release;
 		};
