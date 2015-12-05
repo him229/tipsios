@@ -67,8 +67,14 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
 
     @IBAction func onEditingChanged(sender: AnyObject) {
+        
         var tipPercentages = ["0.15","0.2","0.25"]
-        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        var tipPercentage = "0"
+        if(tipControl.selectedSegmentIndex != -1){
+            tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]}
+        else{
+            tipPercentage="0"
+        }
         pointerValue = Double(tipPercentage)!
         
         let numberFormatter = NSNumberFormatter()
