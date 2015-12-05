@@ -5,7 +5,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pay View Controller-->
+        <scene sceneID="kFX-4m-Bds">
+            <objects>
+                <viewController id="uNG-cB-rh9" customClass="PayViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ei4-Hs-Svy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cOf-mk-Oo1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-d4-oLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="1090"/>
+        </scene>
+        <!--Tipster-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,7 +145,12 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ZIF-m1-O18">
+                    <navigationItem key="navigationItem" title="Tipster" id="ZIF-m1-O18">
+                        <barButtonItem key="leftBarButtonItem" title="Pay" id="SDm-VU-WaN">
+                            <connections>
+                                <segue destination="uNG-cB-rh9" kind="push" id="4yW-Il-TW3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="HDA-Dt-Oge">
                             <connections>
                                 <segue destination="Z8l-Ma-5gO" kind="push" id="YOY-PF-UGT"/>

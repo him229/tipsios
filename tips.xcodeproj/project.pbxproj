@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A374A6571C12C034001778ED /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374A6561C12C034001778ED /* PayViewController.swift */; };
 		A3830F501C111E7B00FD33D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */; };
 		A3C5676B1C0D189A00FB862B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5676A1C0D189A00FB862B /* AppDelegate.swift */; };
 		A3C5676D1C0D189A00FB862B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5676C1C0D189A00FB862B /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		713ED59458EAB6D2F3BF3124 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A374A6541C12AD9D001778ED /* tips-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tips-Bridging-Header.h"; sourceTree = "<group>"; };
 		A374A6551C12B397001778ED /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		A374A6561C12C034001778ED /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A3C567671C0D189A00FB862B /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5676A1C0D189A00FB862B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				A3C567711C0D189A00FB862B /* Assets.xcassets */,
 				A3C567731C0D189A00FB862B /* LaunchScreen.storyboard */,
 				A3C567761C0D189A00FB862B /* Info.plist */,
+				A374A6561C12C034001778ED /* PayViewController.swift */,
 			);
 			path = tips;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				A3C5676D1C0D189A00FB862B /* ViewController.swift in Sources */,
 				A3C5676B1C0D189A00FB862B /* AppDelegate.swift in Sources */,
 				A3830F501C111E7B00FD33D5 /* SettingsViewController.swift in Sources */,
+				A374A6571C12C034001778ED /* PayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
