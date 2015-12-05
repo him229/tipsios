@@ -57,6 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text="$0.00"
         totalLabel.text="$0.00"
+        [billField.becomeFirstResponder()]
         
     }
 
@@ -73,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         if(tipControl.selectedSegmentIndex != -1){
             tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]}
         else{
-            tipPercentage="0"
+            tipPercentage="20"
         }
         pointerValue = Double(tipPercentage)!
         
