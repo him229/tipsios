@@ -94,8 +94,8 @@ class PayingViewController: UIViewController {
     func postStripeToken(token: STPToken){
         
         let URL = "http://localhost/donate/payment.php"
-        let params = ["stripeToken": token.tokenId,
-            "amount": self.amountTextField.text!.toInt()!,
+        let params : [String : Any] = ["stripeToken": token.tokenId,
+            "amount": Int(self.amountTextField.text!)!,
             "currency": "usd",
             "description": self.emailTextField.text]
         
