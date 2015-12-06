@@ -90,6 +90,8 @@ class ViewController: UIViewController, UITableViewDelegate{
         let number = numberFormatter.numberFromString(String(intValue))
         tipSlider.value = (number!.floatValue/100)
         table.reloadData()
+        print(self.billField.frame.origin.y)
+
 
 
     }
@@ -98,12 +100,22 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBAction func onEditingChanged(sender: AnyObject) {
         
         self.blankView.hidden = true
+        self.billField.frame.origin.y = 82
         
         if (billField.text == ""){
             UIView.animateWithDuration(1.0, animations: {
                 //self.blankView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
                 self.blankView.hidden = false
-            })
+                
+                let animation = CABasicAnimation(keyPath: "position")
+                animation.duration = 0.07
+                animation.repeatCount = 4
+                animation.autoreverses = true
+                animation.fromValue = NSValue(CGPoint: CGPointMake(self.billField.center.x-10, self.billField.center.y))
+                animation.toValue = NSValue(CGPoint: CGPointMake(self.billField.center.x+10, self.billField.center.y))
+           self.billField.layer.addAnimation(animation, forKey: "position")
+                
+                self.billField.frame.origin.y += 150             })
         }
         
         var tipPercentages = ["0.15","0.2","0.25"]
