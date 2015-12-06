@@ -11,6 +11,8 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var defaultTextField: UITextField!
+//    var val = 20
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,15 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        defaultTextField.text = "\(defaults.integerForKey("defaultTip"))"
+    }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+    }
     
     /*
     // MARK: - Navigation
@@ -37,11 +47,13 @@ class SettingsViewController: UIViewController {
     @IBAction func update(sender: AnyObject) {
         var updatedValue = Int(defaultTextField.text!)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        
         defaults.setInteger(updatedValue!, forKey: "defaultTip")
         defaults.synchronize()
+        
+//        val = defaults.integerForKey("defaultTip")
     
     }
+    
+    
 
 }
