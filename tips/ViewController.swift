@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     var pointerValue = 0.00
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     @IBAction func sliderMoved(sender: AnyObject) {
         //print(tipSlider.value)
@@ -67,6 +68,27 @@ class ViewController: UIViewController, UITableViewDelegate{
         // Dispose of any resources that can be recreated.
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let intValue = defaults.integerForKey("defaultTip")
+        let numberFormatter = NSNumberFormatter()
+        let number = numberFormatter.numberFromString(String(intValue))
+        tipSlider.value = (number!.floatValue/100)
+        table.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let intValue = defaults.integerForKey("defaultTip")
+        let numberFormatter = NSNumberFormatter()
+        let number = numberFormatter.numberFromString(String(intValue))
+        tipSlider.value = (number!.floatValue/100)
+        table.reloadData()
+
+
+    }
+    
 
     @IBAction func onEditingChanged(sender: AnyObject) {
         

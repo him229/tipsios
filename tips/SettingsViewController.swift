@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     /*
     // MARK: - Navigation
 
@@ -30,5 +33,15 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func update(sender: AnyObject) {
+        var updatedValue = Int(defaultTextField.text!)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setInteger(updatedValue!, forKey: "defaultTip")
+        defaults.synchronize()
+    
+    }
 
 }
