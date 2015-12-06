@@ -122,5 +122,8 @@ class PayingViewController: UIViewController {
     
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
     
 }
