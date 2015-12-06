@@ -80,7 +80,7 @@ class PayingViewController: UIViewController {
                         self.postStripeToken(token!)
                 })
             } catch {
-                print("There was an error.")
+                print("There was an error. here")
             }
     }
     
@@ -93,11 +93,12 @@ class PayingViewController: UIViewController {
     }
     func postStripeToken(token: STPToken){
         
+        //var error : NSError
         let URL = "http://localhost/donate/payment.php"
-        let params : [String : Any] = ["stripeToken": token.tokenId,
+        let params : [String : AnyObject] = ["stripeToken": token.tokenId,
             "amount": Int(self.amountTextField.text!)!,
             "currency": "usd",
-            "description": self.emailTextField.text]
+            "description": self.emailTextField.text!]
         
         let manager = AFHTTPRequestOperationManager()
         manager.POST(URL, parameters: params, success: { (operation, responseObject) -> Void in
@@ -109,8 +110,8 @@ class PayingViewController: UIViewController {
                     cancelButtonTitle: "OK").show()
             }
             
-            }) { (operation, error) -> Void in
-                self.handleError(error!)
+            }) { (operation, error: NSError) -> Void in
+                self.handleError(error)
         }
     
     }
