@@ -76,7 +76,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wr-d4-oLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="1090"/>
+            <point key="canvasLocation" x="829" y="1086"/>
+        </scene>
+        <!--Paying View Controller-->
+        <scene sceneID="C32-Es-ATQ">
+            <objects>
+                <viewController id="YGJ-WY-f2R" customClass="PayingViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EOj-YH-cob">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="NaY-Vt-XOh">
+                                <rect key="frame" x="112" y="111" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="I7G-b8-KTp">
+                                <rect key="frame" x="112" y="155" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="MFV-aa-NjR">
+                                <rect key="frame" x="112" y="208" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="C0S-fh-DYa">
+                                <rect key="frame" x="112" y="259" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="3eR-Ud-y25">
+                                <rect key="frame" x="112" y="313" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bO5-UM-LNd">
+                                <rect key="frame" x="137" y="377" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="donate:" destination="YGJ-WY-f2R" eventType="touchUpInside" id="5IY-Xs-tEF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hMv-4e-eUp"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="3eR-Ud-y25" id="54q-MI-3Y7"/>
+                        <outlet property="cardNumberTextField" destination="I7G-b8-KTp" id="rSy-zK-VCc"/>
+                        <outlet property="cvcTextField" destination="C0S-fh-DYa" id="qkI-Ts-so9"/>
+                        <outlet property="emailTextField" destination="NaY-Vt-XOh" id="vSz-0N-5bh"/>
+                        <outlet property="expireDateTextField" destination="MFV-aa-NjR" id="7pt-Oj-MGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asc-9e-T5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="657"/>
         </scene>
         <!--Tipster-->
         <scene sceneID="tne-QT-ifu">
@@ -205,7 +274,7 @@
                     <navigationItem key="navigationItem" title="Tipster" id="ZIF-m1-O18">
                         <barButtonItem key="leftBarButtonItem" title="Pay" id="SDm-VU-WaN">
                             <connections>
-                                <segue destination="uNG-cB-rh9" kind="push" id="4yW-Il-TW3"/>
+                                <segue destination="YGJ-WY-f2R" kind="push" id="vfT-Tt-iZK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="HDA-Dt-Oge">

@@ -14,6 +14,7 @@
 		A3C567701C0D189A00FB862B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5676E1C0D189A00FB862B /* Main.storyboard */; };
 		A3C567721C0D189A00FB862B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C567711C0D189A00FB862B /* Assets.xcassets */; };
 		A3C567751C0D189A00FB862B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C567731C0D189A00FB862B /* LaunchScreen.storyboard */; };
+		A3C734641C13BDAD00477480 /* PayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C734631C13BDAD00477480 /* PayingViewController.swift */; };
 		F6F80963CC1151E1C75120D5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E91D8700266015ACF613D90 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		A3C567711C0D189A00FB862B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3C567741C0D189A00FB862B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3C567761C0D189A00FB862B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3C734631C13BDAD00477480 /* PayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				A3C5676A1C0D189A00FB862B /* AppDelegate.swift */,
 				A3C5676C1C0D189A00FB862B /* ViewController.swift */,
 				A3C5676E1C0D189A00FB862B /* Main.storyboard */,
+				A3C734631C13BDAD00477480 /* PayingViewController.swift */,
 				A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */,
 				A3C567711C0D189A00FB862B /* Assets.xcassets */,
 				A3C567731C0D189A00FB862B /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			files = (
 				A3C5676D1C0D189A00FB862B /* ViewController.swift in Sources */,
 				A3C5676B1C0D189A00FB862B /* AppDelegate.swift in Sources */,
+				A3C734641C13BDAD00477480 /* PayingViewController.swift in Sources */,
 				A3830F501C111E7B00FD33D5 /* SettingsViewController.swift in Sources */,
 				A374A6571C12C034001778ED /* PayViewController.swift in Sources */,
 			);
