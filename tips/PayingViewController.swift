@@ -65,6 +65,53 @@ class PayingViewController: UIViewController {
                 stripCard.expMonth = expMonth
                 stripCard.expYear = expYear
             }
+            
+            do {
+                try stripCard.validateCardReturningError()
+                
+                STPAPIClient.sharedClient().createTokenWithCard(
+                    stripCard,
+                    completion: { (token: STPToken?, error: NSError?) -> Void in
+                        
+                        if error != nil {
+                            self.handleError(error!)
+                            return
+                        }
+                        self.postStripeToken(token!)
+                })
+            } catch {
+                print("There was an error.")
+            }
+    }
+    
+    func handleError(error: NSError) {
+        UIAlertView(title: "Please Try Again",
+            message: error.localizedDescription,
+            delegate: nil,
+            cancelButtonTitle: "OK").show()
+        
+    }
+    func postStripeToken(token: STPToken){
+        
+        let URL = "http://localhost/donate/payment.php"
+        let params = ["stripeToken": token.tokenId,
+            "amount": self.amountTextField.text!.toInt()!,
+            "currency": "usd",
+            "description": self.emailTextField.text]
+        
+        let manager = AFHTTPRequestOperationManager()
+        manager.POST(URL, parameters: params, success: { (operation, responseObject) -> Void in
+            
+            if let response = responseObject as? [String: String] {
+                UIAlertView(title: response["status"],
+                    message: response["message"],
+                    delegate: nil,
+                    cancelButtonTitle: "OK").show()
+            }
+            
+            }) { (operation, error) -> Void in
+                self.handleError(error!)
         }
-
+    
+    }
 }
