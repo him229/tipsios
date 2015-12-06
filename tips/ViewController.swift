@@ -58,6 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         tipLabel.text="$0.00"
         totalLabel.text="$0.00"
         [billField.becomeFirstResponder()]
+
         
     }
 

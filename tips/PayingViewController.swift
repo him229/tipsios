@@ -15,10 +15,11 @@ class PayingViewController: UIViewController {
         @IBOutlet weak var expireDateTextField: UITextField!
         @IBOutlet weak var cvcTextField: UITextField!
         @IBOutlet weak var amountTextField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
         // Do any additional setup after loading the view.
     }
 
@@ -64,11 +65,14 @@ class PayingViewController: UIViewController {
                     = self.cvcTextField.text
                 stripCard.expMonth = expMonth
                 stripCard.expYear = expYear
+                
+                print("set details")
             }
             
             do {
-                try stripCard.validateCardReturningError()
-                
+                //try stripCard.validateCardReturningError()
+                try STPCardValidator .validationStateForNumber (cardNumberTextField.text!, validatingCardBrand: true)
+                print("started stripe client")
                 STPAPIClient.sharedClient().createTokenWithCard(
                     stripCard,
                     completion: { (token: STPToken?, error: NSError?) -> Void in
@@ -85,6 +89,7 @@ class PayingViewController: UIViewController {
     }
     
     func handleError(error: NSError) {
+        print("got to func handle error")
         UIAlertView(title: "Please Try Again",
             message: error.localizedDescription,
             delegate: nil,
@@ -94,6 +99,7 @@ class PayingViewController: UIViewController {
     func postStripeToken(token: STPToken){
         
         //var error : NSError
+        print("got to func post stripe token")
         let URL = "http://localhost/donate/payment.php"
         let params : [String : AnyObject] = ["stripeToken": token.tokenId,
             "amount": Int(self.amountTextField.text!)!,
@@ -115,4 +121,6 @@ class PayingViewController: UIViewController {
         }
     
     }
+    
+    
 }
