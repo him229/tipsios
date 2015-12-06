@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    @IBOutlet weak var blankView: UIView!
     var pointerValue = 0.00
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -44,10 +45,14 @@ class ViewController: UIViewController, UITableViewDelegate{
         let tipValue = (tipNum/100.00) * billAmt
         var rowNum = Double(indexPath.row)+1
         cell.textLabel?.text = String(format: "$%.2f", (tipValue + billAmt)/rowNum)
+        cell.textLabel?.textAlignment = .Center
+        
         tipPer.text = "\((tipNum)) \(tipValue) \(billAmt)"
     
         totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
         tipLabel.text = String(format: "$%.2f", (tipValue))
+        
+        
         
         return cell
     }
@@ -91,6 +96,15 @@ class ViewController: UIViewController, UITableViewDelegate{
     
 
     @IBAction func onEditingChanged(sender: AnyObject) {
+        
+        self.blankView.hidden = true
+        
+        if (billField.text == ""){
+            UIView.animateWithDuration(1.0, animations: {
+                //self.blankView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+                self.blankView.hidden = false
+            })
+        }
         
         var tipPercentages = ["0.15","0.2","0.25"]
         var tipPercentage = "0"
