@@ -90,8 +90,6 @@ class ViewController: UIViewController, UITableViewDelegate{
         
         self.billField.frame.origin.y = 282
 
-
-
     
     }
 
