@@ -8,6 +8,15 @@
 
 import UIKit
 
+extension Double {
+    var asLocaleCurrency:String {
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        return formatter.stringFromNumber(self)!
+    }
+}
+
 class ViewController: UIViewController, UITableViewDelegate{
 
     @IBOutlet weak var totalLabel: UILabel!
@@ -21,6 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var blankView: UIView!
     var pointerValue = 0.00
     let defaults = NSUserDefaults.standardUserDefaults()
+    
+    
     
     @IBAction func sliderMoved(sender: AnyObject) {
         //print(tipSlider.value)
@@ -44,12 +55,15 @@ class ViewController: UIViewController, UITableViewDelegate{
         let tipNum = Double(Int(tipSlider.value * 100))
         let tipValue = (tipNum/100.00) * billAmt
         var rowNum = Double(indexPath.row)+1
-        cell.textLabel?.text = String(format: "$%.2f", (tipValue + billAmt)/rowNum)
+        //cell.textLabel?.text = String(format: "$%.2f", ((tipValue + billAmt)/rowNum).asLocaleCurrency)
+        cell.textLabel?.text = ((tipValue + billAmt)/rowNum).asLocaleCurrency
+
         cell.textLabel?.textAlignment = .Center
         
         tipPer.text = "\((tipNum)) \(tipValue) \(billAmt)"
     
-        totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
+        //totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
+        totalLabel.text = (tipValue + billAmt).asLocaleCurrency
         tipLabel.text = String(format: "$%.2f", (tipValue))
         
         
@@ -64,6 +78,12 @@ class ViewController: UIViewController, UITableViewDelegate{
         tipLabel.text="$0.00"
         totalLabel.text="$0.00"
         [billField.becomeFirstResponder()]
+//        self.blankView.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
+        self.view.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
+        self.blankView.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
+
+
 
         
     }
@@ -98,6 +118,11 @@ class ViewController: UIViewController, UITableViewDelegate{
     
 
     @IBAction func onEditingChanged(sender: AnyObject) {
+        
+//        let amount = Double(billField.text!)
+//        let amountString = amount!.asLocaleCurrency
+//        print(amount!.asLocaleCurrency)
+//        billField.text = Double(billField.text!)?.asLocaleCurrency
         
         self.blankView.hidden = true
         self.billField.frame.origin.y = 82
