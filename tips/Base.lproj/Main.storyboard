@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="308" y="657"/>
         </scene>
-        <!--Tipster-->
+        <!--Tipsy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
@@ -293,7 +293,7 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Tipster" id="ZIF-m1-O18">
+                    <navigationItem key="navigationItem" title="Tipsy" id="ZIF-m1-O18">
                         <barButtonItem key="leftBarButtonItem" title="Pay" id="SDm-VU-WaN">
                             <connections>
                                 <segue destination="YGJ-WY-f2R" kind="push" id="vfT-Tt-iZK"/>
@@ -354,16 +354,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Default Tip Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kjY-XD-83I">
+                                <rect key="frame" x="0.0" y="223" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ah5-ab-Q9t" appends="YES" id="3E8-H8-UVf"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gAT-pu-CU5"/>
                     <connections>
                         <outlet property="defaultTextField" destination="lBg-Dt-waM" id="fAb-jL-iPI"/>
+                        <outlet property="onTap" destination="ah5-ab-Q9t" id="T9S-GS-NI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9x-3o-tiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ah5-ab-Q9t">
+                    <connections>
+                        <action selector="onTap:" destination="Z8l-Ma-5gO" id="Qij-k7-Bva"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057" y="228"/>
         </scene>

@@ -56,6 +56,10 @@ class SettingsViewController: UIViewController {
     
     }
     
+    @IBOutlet var onTap: UITapGestureRecognizer!
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
 
 }
