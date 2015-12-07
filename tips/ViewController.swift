@@ -55,21 +55,26 @@ class ViewController: UIViewController, UITableViewDelegate{
         let tipNum = Double(Int(tipSlider.value * 100))
         let tipValue = (tipNum/100.00) * billAmt
         var rowNum = Double(indexPath.row)+1
+        var listStar = ["","*       ", "* *       ","* * *       ","* * * *       "]
         //cell.textLabel?.text = String(format: "$%.2f", ((tipValue + billAmt)/rowNum).asLocaleCurrency)
-        cell.textLabel?.text = ((tipValue + billAmt)/rowNum).asLocaleCurrency
+        cell.textLabel?.text = listStar[Int(rowNum)]+((tipValue + billAmt)/rowNum).asLocaleCurrency
 
         cell.textLabel?.textAlignment = .Center
         
-        tipPer.text = "\((tipNum)) \(tipValue) \(billAmt)"
+        tipPer.text = "\((tipNum)) %"
     
         //totalLabel.text = String(format: "$%.2f", (tipValue + billAmt))
         totalLabel.text = (tipValue + billAmt).asLocaleCurrency
-        tipLabel.text = String(format: "$%.2f", (tipValue))
+        tipLabel.text = (tipValue).asLocaleCurrency
         
         
         
         return cell
     }
+//    
+//    func repeatString(n: Int, s: String) -> String {
+//        return Array((count: n, repeatedValue: s) as! [String]).joinWithSeparator("")
+//    }
 
     
     override func viewDidLoad() {
@@ -82,10 +87,12 @@ class ViewController: UIViewController, UITableViewDelegate{
 //        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
         self.view.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
         self.blankView.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
-
-
-
         
+        self.billField.frame.origin.y = 282
+
+
+
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -140,7 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate{
                 animation.toValue = NSValue(CGPoint: CGPointMake(self.billField.center.x+10, self.billField.center.y))
            self.billField.layer.addAnimation(animation, forKey: "position")
                 
-                self.billField.frame.origin.y += 150             })
+                self.billField.frame.origin.y += 200             })
         }
         
         var tipPercentages = ["0.15","0.2","0.25"]
