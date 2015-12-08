@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         let tipNum = Double(Int(tipSlider.value * 100))
         let tipValue = (tipNum/100.00) * billAmt
         var rowNum = Double(indexPath.row)+1
-        var listStar = ["","*                 ", "*  *              ","*  *  *           ","*  *  *  *        "]
+        var listStar = ["","*                    "+"          ", "*  *                "+"          ","*  *  *            "+"          ","*  *  *  *        "+"          "]
         //cell.textLabel?.text = String(format: "$%.2f", ((tipValue + billAmt)/rowNum).asLocaleCurrency)
         cell.textLabel?.text = listStar[Int(rowNum)]+((tipValue + billAmt)/rowNum).asLocaleCurrency
 
