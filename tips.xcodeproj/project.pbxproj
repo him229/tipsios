@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A374A6571C12C034001778ED /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374A6561C12C034001778ED /* PayViewController.swift */; };
 		A3830F501C111E7B00FD33D5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */; };
+		A393856D1C1681B5006DD7FD /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = A393856C1C1681B5006DD7FD /* AppIcon.appiconset */; };
 		A3C5676B1C0D189A00FB862B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5676A1C0D189A00FB862B /* AppDelegate.swift */; };
 		A3C5676D1C0D189A00FB862B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5676C1C0D189A00FB862B /* ViewController.swift */; };
 		A3C567701C0D189A00FB862B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C5676E1C0D189A00FB862B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		A374A6551C12B397001778ED /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		A374A6561C12C034001778ED /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A393856C1C1681B5006DD7FD /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = ../../../../Downloads/1449565366_Cake/ios/AppIcon.appiconset; sourceTree = "<group>"; };
 		A3C567671C0D189A00FB862B /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5676A1C0D189A00FB862B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C5676C1C0D189A00FB862B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				A3C734631C13BDAD00477480 /* PayingViewController.swift */,
 				A3830F4F1C111E7B00FD33D5 /* SettingsViewController.swift */,
 				A3C567711C0D189A00FB862B /* Assets.xcassets */,
+				A393856C1C1681B5006DD7FD /* AppIcon.appiconset */,
 				A3C567731C0D189A00FB862B /* LaunchScreen.storyboard */,
 				A3C567761C0D189A00FB862B /* Info.plist */,
 				A374A6561C12C034001778ED /* PayViewController.swift */,
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A393856D1C1681B5006DD7FD /* AppIcon.appiconset in Resources */,
 				A3C567751C0D189A00FB862B /* LaunchScreen.storyboard in Resources */,
 				A3C567721C0D189A00FB862B /* Assets.xcassets in Resources */,
 				A3C567701C0D189A00FB862B /* Main.storyboard in Resources */,
