@@ -16,7 +16,9 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundPay.png")!)
+        self.view.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
+
 
 
         // Do any additional setup after loading the view.

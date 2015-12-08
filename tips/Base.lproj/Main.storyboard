@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="500" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.13903729822316635" green="0.76669221422652645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.76862745098039209" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Pay"/>
                                 <connections>
@@ -216,8 +216,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Urc-yH-jY7">
-                                <rect key="frame" x="235" y="177" width="65" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Urc-yH-jY7">
+                                <rect key="frame" x="203" y="177" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -268,7 +268,7 @@
                                     <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aOm-zd-Yb2"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percentage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xPN-2k-W8p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xPN-2k-W8p">
                                 <rect key="frame" x="9" y="177" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -277,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="Zhs-28-drW">
-                                <rect key="frame" x="0.0" y="58" width="320" height="453"/>
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -347,7 +347,7 @@
                                 <rect key="frame" x="0.0" y="500" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.13903729819999999" green="0.7666922142" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.13725490196078433" green="0.76862745098039209" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Update"/>
                                 <connections>

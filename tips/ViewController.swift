@@ -92,6 +92,12 @@ class ViewController: UIViewController, UITableViewDelegate{
         self.blankView.backgroundColor = UIColor(red:0.70, green:0.92, blue:0.95, alpha:1.0)
         
         self.billField.frame.origin.y = 282
+        
+        let intValue = defaults.integerForKey("defaultTip")
+        let numberFormatter = NSNumberFormatter()
+        let number = numberFormatter.numberFromString(String(intValue))
+        tipSlider.value = (number!.floatValue/100)
+        table.reloadData()
 
     
     }
@@ -118,7 +124,7 @@ class ViewController: UIViewController, UITableViewDelegate{
         let number = numberFormatter.numberFromString(String(intValue))
         tipSlider.value = (number!.floatValue/100)
         table.reloadData()
-        print(self.billField.frame.origin.y)
+        //print(self.billField.frame.origin.y)
 
 
 
@@ -156,7 +162,11 @@ class ViewController: UIViewController, UITableViewDelegate{
         if(tipControl.selectedSegmentIndex != -1){
             tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]}
         else{
-            tipPercentage="20"
+            let intValue = defaults.integerForKey("defaultTip")
+            let numberFormatter = NSNumberFormatter()
+            let number = numberFormatter.numberFromString(String(intValue))
+            //var numFloat = (number!.floatValue/100)
+            tipPercentage = String((number!.floatValue/100)) // look at this
         }
         pointerValue = Double(tipPercentage)!
         
