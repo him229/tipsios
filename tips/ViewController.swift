@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate{
     @IBAction func sliderMoved(sender: AnyObject) {
         //print(tipSlider.value)
         table.reloadData()
-        
         if(Double(tipSlider.value) != pointerValue){tipControl.selectedSegmentIndex = -1}
 
     }
