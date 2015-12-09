@@ -41,7 +41,7 @@ Here's a screenshot of Stripe's Dashboard to show that payments actually went th
 
 ## Notes
 
-No prior iOS programming experience. Intergarting Stripe's API was the hardest part as I had to make request from the app to a server to process the payments. Not a lot of resources available online for Swift 2.0. However, it was a fun and challenging experience. Definitely learned a lot! 
+No prior iOS programming experience. Intergarting Stripe's API was the hardest part as I had to make request from the app to a server to process the payments. Not a lot of resources available online for Swift 2.0. However, it was a fun and challenging experience overall. Definitely learned a lot! 
 
 ## License
 
