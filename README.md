@@ -1,30 +1,17 @@
-# Pre-work - Tipsy
+#Tipsy
 
-Tipsy is a tip calculator application for iOS.
+Tipsy is a tip calculator and payment application for iOS.
 
-Submitted by: Himank Yadav
-
-Time spent: 30+ hours spent in total
-
-8 User Stories
-
-The following **required** functionality is complete:
+8 User Stories implemented
 
 * [X] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 * [X] Settings page to change the default tip percentage.
-
-The following **optional** features are implemented:
 * [X] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
 * [X] Using locale-specific currency and currency thousands separators.
 * [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
-
-The following **additional** features are implemented:
-
 - [X] Included a slider for added flexibility while calculating tips
 - [X] Included the ability to split tips between 4 (or less) people
 - [X] Integrated Stripe's API to include additional functionality of paying the business or splitting the bill between friends from within the application 
-
 
 ## Video Walkthrough 
 
