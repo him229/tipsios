@@ -1,6 +1,8 @@
-#Tipsy
+# Tipsy
 
 Tipsy is a tip calculator and payment application for iOS.
+
+## User Stories
 
 8 User Stories implemented
 
